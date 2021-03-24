@@ -4,17 +4,33 @@
     box-sizing: border-box;
 }
 
+/* MAIN */
+
+main{
+    height: calc(100vh - 60px);
+    display: flex;
+}
+
+aside{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+   
+}
+
 /* TOGGLE BAR */
 
 .toggle-bar{
     display: flex;
+    flex-flow: row nowrap;
     height: 60px;
     background-color: #282828;
+    justify-content: space-between;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    justify-content: space-between;
 }
 
 /* LEFT */
@@ -26,27 +42,19 @@
 
 .toggle-bar-left >.img-container{
     width: 40px;
-    height: 40px;
 }
 
 .toggle-bar-left >.img-container >img{
     width: 100%;
+    flex-shrink: 0;
 }
 
 .toggle-bar-left >.info-container >h5{
     color: white;
 }
 
-.toggle-bar-left >.icons-container >a{
-    text-decoration: none;
 
-}
-
-.toggle-bar-left >*, .toggle-bar-left >.icons-container >*{
-    margin: 0 10px;
-}
-
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
     .icons-container >a{
         display: block;
     }
@@ -54,11 +62,215 @@
 
 /* CENTER */
 
+.toggle-bar-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.toggle-bar-center-top{
+    display: flex;
+    align-items: center;
+}
+
+.toggle-bar-center-bottom{
+    display: flex;
+    align-items: center;
+}
+
+
+.toggle-bar-center-bottom >.progress-bar{
+    flex-grow: 1;
+    background-color: #878787;
+    height: 5px;
+    margin: 0 4px;
+}
+
+.progress-bar >.progress{
+    background-color: white;
+    width: 20%;
+    height: 5px;
+  
+}
+
 /* RIGHT */
+.toggle-bar-right{
+    display: flex;
+    align-items: center;
+}
+
+.toggle-bar-right .progress-bar{
+    background-color: #878787;
+    margin-right: 15px;
+}
+
+/* TOGGLE BAR MEDIA QUERIES */
+
+@media screen and (max-width: 479px){
+    
+    .fa-fw{
+        font-size: 8px;
+    }
+
+    .info-container >p{
+        font-size: 8px;
+    }
+
+    .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
+        margin: 0 1px;
+    }
+
+    .toggle-bar-center-top >*{
+        padding: 0 5px;  
+    }
+
+    .toggle-bar-center-top .fa-play-circle-o{
+        font-size: 15px;
+    }
+
+    .toggle-bar-right >*:not(.progress-bar){
+        padding: 0 1px;
+    }
+
+
+    .toggle-bar-right .progress-bar{
+        width: 40px;
+    }
+   
+}
+
+@media screen and (min-width: 480px){
+
+    .fa-fw{
+        font-size: 12px;
+    }
+    
+    .info-container >p{
+        font-size: 10px;
+    }
+
+    .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
+        margin: 0 4px;
+    }
+
+    .toggle-bar-center-top >*{
+        padding: 0 10px;  
+    }
+
+    .toggle-bar-center-top .fa-play-circle-o{
+        font-size: 20px;
+    }
+
+    .toggle-bar-right >*:not(.progress-bar){
+        padding: 0 4px;
+    }
+
+    .toggle-bar-right .progress-bar{
+        width: 60px;
+    }
+}
+
+
+
+@media screen and (min-width: 768px){
+    .fa-fw{
+        font-size: 16px;
+    }
+
+    .info-container >p{
+        font-size: 12px;
+    }
+
+    .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
+        margin: 0 8px;
+    }
+
+    .toggle-bar-center-top >*{
+        padding: 0 16px;  
+    }
+
+    .toggle-bar-center-top .fa-play-circle-o{
+        font-size: 30px;
+    }
+
+    .toggle-bar-right >*:not(.progress-bar){
+        padding: 0 8px;
+    }
+
+    .toggle-bar-right .progress-bar{
+        width: 80px;
+    }
+
+}
+
+
+@media screen and (min-width: 992px){
+    .fa-fw{
+        font-size: 20px;
+    }
+
+    .info-container >p{
+        font-size: 16px;
+    }
+
+    .toggle-bar-left >*:not(.icons.container), .toggle-bar-left >.icons-container >*{
+        margin: 0 12px;
+    }
+
+    .toggle-bar-center-top >*{
+        padding: 0 25px;  
+    }
+
+    .toggle-bar-center-top .fa-play-circle-o{
+        font-size: 35px;
+    }
+
+    .toggle-bar-right >*:not(.progress-bar){
+        padding: 0 12px;
+    }
+
+    .toggle-bar-right .progress-bar{
+        width: 100px;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px){
+    .fa-fw{
+        font-size: 22px;
+    }
+
+    .toggle-bar-center-top{
+        padding: 0 80px;
+    }
+
+    .toggle-bar-center-top >*{
+        padding: 0 30px;  
+    }
+
+    .toggle-bar-center-top .fa-play-circle-o{
+        font-size: 35px;
+    }
+
+    .toggle-bar-right .progress-bar{
+        width: 120px;
+    }
+
+}
 
 
 /* Utilities */
 
+
+a{
+    text-decoration: none;
+}
+
 .grey-text{
     color: #878787;
+}
+
+.white-text{
+    color: white;
 }
