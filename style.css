@@ -195,7 +195,6 @@ article{
 
 .toggle-bar-left >.img-container{
     width: 40px;
-    margin: 10px 0px;
 }
 
 .toggle-bar-left >.img-container >img{
@@ -321,7 +320,7 @@ a{
     }
 
     .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
-        margin: 0px 1px;
+        margin: 10px 1px;
     }
     
     .icon-container{
@@ -401,7 +400,7 @@ a{
     }
 
     .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
-        margin: 0px 4px;
+        margin: 10px 4px;
     }
 
     .icon-container{
@@ -482,7 +481,7 @@ a{
     }
 
     .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
-        margin: 0px 8px;
+        margin: 10px 8px;
     }
 
     .icon-container{
@@ -559,7 +558,7 @@ a{
     }
 
     .toggle-bar-left >*:not(.icons.container), .toggle-bar-left >.icons-container >*{
-        margin: 0px 12px;
+        margin: 10px 12px;
     }
 
     .toggle-bar-center-top >*{
