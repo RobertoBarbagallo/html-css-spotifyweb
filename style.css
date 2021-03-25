@@ -5,6 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* --------------------------------------------------------- */
 /* MAIN */
 
 main{
@@ -12,11 +13,13 @@ main{
     display: flex;
 }
 
+/* 00000000000000000000000000000000000000 */
+/* ASIDE */
+
 aside{
     background-color: black;
     display: flex;
     flex-direction: column;
-    width: 200px;
 }
 
 #logo{
@@ -38,9 +41,6 @@ aside{
     padding: 10px ;
 }
 
-.menu-button svg{
-    width: 40px;
-}
 
 .menu-button svg, .menu-button h2{
     vertical-align: middle;
@@ -51,9 +51,9 @@ aside{
     overflow: scroll;
 }
 
-.playlist h3, i{
+.playlist h3, .playlist i{
     padding: 10px 0px;
-   vertical-align: middle;
+    vertical-align: middle;
 }
 
 .playlist ul{
@@ -93,9 +93,37 @@ aside{
     margin-left: 10px;
 }
 
+/* 00000000000000000000000000000000000000 */
+/* ARTICLE */
+
+.upgrade-bar{
+    height: 80px;
+    background-color: #070B12;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.upgrade{
+    width: 150px;
+    padding: 10px 0px;
+    border: 1px solid white;
+    border-radius: 8px;
+    text-align: center;
+    margin-right: 20px;  
+    font-size: 10px;
+}
 
 
 
+
+
+
+
+
+
+/* --------------------------------------------------------- */
 /* TOGGLE BAR */
 
 .toggle-bar{
@@ -110,6 +138,7 @@ aside{
     right: 0;
 }
 
+/* 00000000000000000000000000000000000000 */
 /* LEFT */
 
 .toggle-bar-left{
@@ -130,8 +159,11 @@ aside{
     color: white;
 }
 
+.icon-container{
+    display: flex;
+}
 
-
+/* 00000000000000000000000000000000000000 */
 /* CENTER */
 
 .toggle-bar-center{
@@ -155,10 +187,10 @@ aside{
     flex-grow: 1;
     background-color: #878787;
     height: 8px;
-    margin: 0 8px;
+    margin: 0px 8px;
 }
 
-
+/* 00000000000000000000000000000000000000 */
 /* RIGHT */
 .toggle-bar-right{
     display: flex;
@@ -174,6 +206,7 @@ aside{
 
 
 
+/* --------------------------------------------------------- */
 /* Utilities */
 
 .visible{
@@ -211,43 +244,16 @@ a{
 
 
 
-/* PER IL MOMENTO LA SCRIVO QUA */
-
-@media screen and (max-width: 767px){
-    aside{
-        width: 60px;
-    }
-
-    .visible{
-        display: none;
-    }
-
-     .hidden{
-        display: block;
-        width: 40px;
-        flex-shrink: 0;
-    }
-
-    .menu-button svg{
-        width: 100%;
-    }
-
-    .download, .user{
-        justify-content: center;
-    }
-    
-    
-
-}
 
 
 
-
-
-/* TOGGLE BAR MEDIA QUERIES */
+/* --------------------------------------------------------- */
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 479px){
     
+    /* 00000000000000000000000000000000000000 */
+    /* TOGGLE BAR */
     .fa-fw{
         font-size: 8px;
     }
@@ -257,19 +263,20 @@ a{
     }
 
     .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
-        margin: 0 1px;
+        margin: 0px 1px;
+    }
+    
+    .icon-container{
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .icons-container >a{
-        display: block;
-    }
-
-    .icons-container >a >i{
+    .toggle-bar-left >a >i{
         line-height: 0px;
     }
 
     .toggle-bar-center-top >*{
-        padding: 0 5px;  
+        padding: 0px 5px;  
     }
 
     .toggle-bar-center-top .fa-play-circle-o{
@@ -284,11 +291,44 @@ a{
     .toggle-bar-right .progress-bar{
         width: 40px;
     }
+
+    /* 00000000000000000000000000000000000000 */
+    /* ASIDE */
+    aside{
+        width: 60px;
+    }
+
+    .visible{
+        display: none;
+    }
+
+    .hidden{
+        display: block;
+        width: 40px;
+        flex-shrink: 0;
+    }
+
+    .menu-button svg{
+        width: 100%;
+    }
+
+    .download, .user{
+        justify-content: center;
+    }
+    
+    /* 00000000000000000000000000000000000000 */
+    /* ARTICLE */
+    article{
+        width: calc(100vw - 60px);
+    }
+
    
 }
 
 @media screen and (min-width: 480px){
 
+    /* 00000000000000000000000000000000000000 */    
+    /* TOGGLE BAR */
     .fa-fw{
         font-size: 12px;
     }
@@ -298,15 +338,20 @@ a{
     }
 
     .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
-        margin: 0 4px;
+        margin: 0px 4px;
     }
 
-    .icons-container >a >i{
+    .icon-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .toggle-bar-left >a >i{
         line-height: 0px;
     }
 
     .toggle-bar-center-top >*{
-        padding: 0 10px;  
+        padding: 0px 10px;  
     }
 
     .toggle-bar-center-top .fa-play-circle-o{
@@ -320,11 +365,45 @@ a{
     .toggle-bar-right .progress-bar{
         width: 60px;
     }
+
+    /* 00000000000000000000000000000000000000 */
+     /* ASIDE */
+     aside{
+        width: 60px;
+    }
+
+    .visible{
+        display: none;
+    }
+
+        .hidden{
+        display: block;
+        width: 40px;
+        flex-shrink: 0;
+    }
+
+    .menu-button svg{
+        width: 100%;
+    }
+
+    .download, .user{
+        justify-content: center;
+    }
+
+    /* 00000000000000000000000000000000000000 */
+    /* ARTICLE */
+    article{
+        width: calc(100vw - 60px);
+    }
+
 }
 
 
 
 @media screen and (min-width: 768px){
+
+     /* 00000000000000000000000000000000000000 */
+    /* TOGGLE BAR */
     .fa-fw{
         font-size: 16px;
     }
@@ -334,15 +413,19 @@ a{
     }
 
     .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
-        margin: 0 8px;
+        margin: 0px 8px;
     }
 
-    .icons-container >a >i{
+    .icon-container{
+        flex-direction: row;
+    }
+
+    .toggle-bar-left >a >i{
         line-height: 8px;
     }
 
     .toggle-bar-center-top >*{
-        padding: 0 16px;  
+        padding: 0px 16px;  
     }
 
     .toggle-bar-center-top .fa-play-circle-o{
@@ -357,10 +440,41 @@ a{
         width: 80px;
     }
 
+    /* 00000000000000000000000000000000000000 */
+    /* ASIDE */
+    aside{
+        width: 200px;
+    }
+
+    .visible{
+        display: inline-block;
+    }
+
+     .hidden{
+        display: none;
+    }
+
+    .menu-button svg{
+        width: 40px;
+    }
+
+    .download, .user{
+        justify-content: flex-start;
+    }
+
+    /* 00000000000000000000000000000000000000 */
+    /* ARTICLE */
+    article{
+        width: calc(100vw - 200px);
+    }
+
 }
 
 
 @media screen and (min-width: 992px){
+
+    /* 00000000000000000000000000000000000000 */
+    /* TOGGLE BAR */ 
     .fa-fw{
         font-size: 20px;
     }
@@ -370,11 +484,11 @@ a{
     }
 
     .toggle-bar-left >*:not(.icons.container), .toggle-bar-left >.icons-container >*{
-        margin: 0 12px;
+        margin: 0px 12px;
     }
 
     .toggle-bar-center-top >*{
-        padding: 0 25px;  
+        padding: 0px 25px;  
     }
 
     .toggle-bar-center-top .fa-play-circle-o{
@@ -393,6 +507,10 @@ a{
 }
 
 @media screen and (min-width: 1200px){
+
+    /* 00000000000000000000000000000000000000 */
+    /* TOGGLE BAR */
+
     .fa-fw{
         font-size: 22px;
     }
