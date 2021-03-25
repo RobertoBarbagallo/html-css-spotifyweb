@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* MAIN */
@@ -16,8 +17,83 @@ aside{
     display: flex;
     flex-direction: column;
     width: 200px;
-   
 }
+
+#logo{
+    width: 80%;
+}
+
+#logo, #logo-small{
+    margin-top: 15px;
+    align-self: center;
+}
+
+
+.botton-container, .playlist, .download, .user{
+    margin: 10px;
+}
+
+.menu-button{
+    padding: 10px ;
+}
+
+.menu-button svg{
+    width: 40px;
+}
+
+.menu-button svg, .menu-button h2{
+    vertical-align: middle;
+}
+
+.playlist{
+    flex-grow: 1;
+    overflow: scroll;
+}
+
+.playlist h3, i{
+    padding: 10px 0px;
+   vertical-align: middle;
+}
+
+.playlist ul{
+    list-style: none;
+}
+
+.playlist ul li{
+    padding: 5px;
+}
+
+.download, .user{
+    display: flex;
+}
+
+.download >svg{
+    width: 20px;
+    vertical-align: middle;
+    align-self: center;
+}
+
+.user-container{
+    width: 30px;
+    height: 30px;
+    background-color: #878787;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+ 
+}
+
+.user-container svg{
+    width: 70%; 
+}
+
+.download h5, .user h5{
+    margin-left: 10px;
+}
+
+
+
 
 /* TOGGLE BAR */
 
@@ -82,27 +158,94 @@ aside{
 .toggle-bar-center-bottom >.progress-bar{
     flex-grow: 1;
     background-color: #878787;
-    height: 5px;
-    margin: 0 4px;
+    height: 8px;
+    margin: 0 8px;
 }
 
-.progress-bar >.progress{
-    background-color: white;
-    width: 20%;
-    height: 5px;
-  
-}
 
 /* RIGHT */
 .toggle-bar-right{
     display: flex;
-    align-items: center;
+    align-items: center;   
 }
 
 .toggle-bar-right .progress-bar{
     background-color: #878787;
     margin-right: 15px;
+    height: 4px;
+
 }
+
+
+
+/* Utilities */
+
+.visible{
+    display: inline-block;
+}
+
+ .hidden{
+    display: none;
+}
+
+hr{
+    border: 1px solid #878787;
+    width: 90%;
+    margin: 3px auto;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.grey-text{
+    color: #878787;
+}
+
+.white-text{
+    color: white;
+}
+
+.progress-bar >.progress{
+    background-color: white;
+    width: 20%;
+    height: 100%;
+}
+
+
+
+/* PER IL MOMENTO LA SCRIVO QUA */
+
+@media screen and (max-width: 767px){
+    aside{
+        width: 60px;
+    }
+
+    .visible{
+        display: none;
+    }
+
+     .hidden{
+        display: block;
+        width: 40px;
+    }
+
+    .menu-button svg{
+        width: 100%;
+    }
+
+    .download, .user{
+        justify-content: center;
+    }
+    
+    
+
+}
+
+
+
+
 
 /* TOGGLE BAR MEDIA QUERIES */
 
@@ -129,7 +272,7 @@ aside{
     }
 
     .toggle-bar-right >*:not(.progress-bar){
-        padding: 0 1px;
+        padding: 0px 1px;
     }
 
 
@@ -162,7 +305,7 @@ aside{
     }
 
     .toggle-bar-right >*:not(.progress-bar){
-        padding: 0 4px;
+        padding: 0px 4px;
     }
 
     .toggle-bar-right .progress-bar{
@@ -194,7 +337,7 @@ aside{
     }
 
     .toggle-bar-right >*:not(.progress-bar){
-        padding: 0 8px;
+        padding: 0px 8px;
     }
 
     .toggle-bar-right .progress-bar{
@@ -226,7 +369,7 @@ aside{
     }
 
     .toggle-bar-right >*:not(.progress-bar){
-        padding: 0 12px;
+        padding: 0px 12px;
     }
 
     .toggle-bar-right .progress-bar{
@@ -249,28 +392,8 @@ aside{
         padding: 0 30px;  
     }
 
-    .toggle-bar-center-top .fa-play-circle-o{
-        font-size: 35px;
-    }
-
     .toggle-bar-right .progress-bar{
         width: 120px;
     }
 
-}
-
-
-/* Utilities */
-
-
-a{
-    text-decoration: none;
-}
-
-.grey-text{
-    color: #878787;
-}
-
-.white-text{
-    color: white;
 }
