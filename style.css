@@ -190,10 +190,12 @@ article{
 .toggle-bar-left{
     display: flex;
     align-items: center;
+
 }
 
 .toggle-bar-left >.img-container{
     width: 40px;
+    margin: 10px 0px;
 }
 
 .toggle-bar-left >.img-container >img{
