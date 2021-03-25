@@ -21,6 +21,7 @@ aside{
 
 #logo{
     width: 80%;
+    flex-shrink: 0;
 }
 
 #logo, #logo-small{
@@ -130,11 +131,6 @@ aside{
 }
 
 
-@media screen and (max-width: 991px){
-    .icons-container >a{
-        display: block;
-    }
-}
 
 /* CENTER */
 
@@ -229,6 +225,7 @@ a{
      .hidden{
         display: block;
         width: 40px;
+        flex-shrink: 0;
     }
 
     .menu-button svg{
@@ -261,6 +258,14 @@ a{
 
     .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
         margin: 0 1px;
+    }
+
+    .icons-container >a{
+        display: block;
+    }
+
+    .icons-container >a >i{
+        line-height: 0px;
     }
 
     .toggle-bar-center-top >*{
@@ -296,6 +301,10 @@ a{
         margin: 0 4px;
     }
 
+    .icons-container >a >i{
+        line-height: 0px;
+    }
+
     .toggle-bar-center-top >*{
         padding: 0 10px;  
     }
@@ -326,6 +335,10 @@ a{
 
     .toggle-bar-left >*,:not(.icons.container) .toggle-bar-left >.icons-container >*{
         margin: 0 8px;
+    }
+
+    .icons-container >a >i{
+        line-height: 8px;
     }
 
     .toggle-bar-center-top >*{
