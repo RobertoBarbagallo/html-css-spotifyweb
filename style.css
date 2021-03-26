@@ -155,7 +155,7 @@ article{
 }
 
 .album img{
-   max-width: 100%;
+   max-width: 70%;
 }
 
 .album h4{
@@ -381,8 +381,7 @@ a{
     }
     .album{
         width: calc((100vw - 90px) / 2);
-        flex-basis: 160px;
-        margin: 10px;
+        margin: 15px 0px;
    }
 
 }
@@ -455,13 +454,13 @@ a{
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
     .img-holder{
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
     }
+    
     .album{
         width: calc((100vw - 90px) / 4);
-        flex-basis: 160px;
-        margin: 10px;
+        margin: 15px 0px;
    }
 
 }
@@ -539,8 +538,8 @@ a{
     }
     .album{
         width: calc((100vw - 230px) / 4);
-        flex-basis: 160px;
-        margin: 10px;
+        margin: 15px 0px;
+
    }
 }
 
@@ -586,7 +585,7 @@ a{
 
     .album{
         width: calc((100vw - 230px) / 6);
-        flex-basis: 110px;
+        margin: 0px auto;
    }
 
 
@@ -621,7 +620,7 @@ a{
     }
     .album{
         width: calc((100vw - 230px) / 6);
-        flex-basis: 125px;
+        margin: 0px auto;
     }
  
 
