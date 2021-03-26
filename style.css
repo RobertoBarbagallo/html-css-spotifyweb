@@ -22,9 +22,10 @@ aside{
     flex-direction: column;
 }
 
+
 #logo{
-    width: 80%;
-    flex-shrink: 0;
+    width: 70%;
+ 
 }
 
 #logo, #logo-small{
@@ -32,16 +33,20 @@ aside{
     align-self: center;
 }
 
-.menu-button{
-    padding: 10px ;
-}
-
 .botton-container, .playlist, .download, .user{
     margin: 10px;
 }
 
+.menu-button{
+    padding-top: 10px;
+}
+
 .menu-button svg, .menu-button h3{
     vertical-align: middle;
+}
+
+.menu-button h3{
+    font-size: 14px;
 }
 
 .playlist{
@@ -54,18 +59,38 @@ aside{
     vertical-align: middle;
 }
 
+.playlist h3{
+    font-size: 16px;
+}
+
+.playlist i{
+    font-size: 2em;
+}
+
+.playlist h4{
+    font-size: 14px;
+}
+
+.playlist ul{
+    width: 100%;
+}
+
 .playlist ul li{
     padding: 5px;
+    font-size: 8px;
 }
 
 .download, .user{
     display: flex;
+    align-items: center;
 }
 
 .download >svg{
     width: 20px;
-    vertical-align: middle;
-    align-self: center;
+}
+
+.download >h5{
+    font-size: 10px;
 }
 
 .user-container{
@@ -165,6 +190,9 @@ article{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .album-text{
@@ -398,6 +426,9 @@ a{
     
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
+    article{
+        width: calc(100% - 60px);
+    }
     .album{
         width: calc(100% / 2);
         margin: 15px 0px;
@@ -478,6 +509,9 @@ a{
 
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
+    article{
+        width: calc(100% - 60px);
+    }
     .album{
         width: calc(100% / 4);
         margin: 15px 0px;
@@ -547,7 +581,7 @@ a{
     }
 
     .menu-button svg{
-        width: 40px;
+        width: 20%;
     }
 
     .download, .user{
@@ -556,6 +590,9 @@ a{
 
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
+    article{
+        width: calc(100% - 200px);
+    }
     .album{
         width: calc(100% / 4);
         margin: 15px 0px;
@@ -598,6 +635,9 @@ a{
 
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
+    article{
+        width: calc(100% - 200px);
+    }
     .album{
         width: calc(100% / 6);
    }
@@ -628,6 +668,10 @@ a{
 
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
+    article{
+        width: calc(100% - 200px);
+    }
+    
     .album{    
         width: calc(100% / 6);
     }
@@ -649,7 +693,9 @@ a{
     filter: drop-shadow(0 0 4mm  white);
 }
 
-.overlay:hover{
+
+.img-wrapper:hover .overlay{
     visibility: visible;
 }
+
 
