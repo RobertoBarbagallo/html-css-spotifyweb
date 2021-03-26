@@ -140,18 +140,24 @@ article{
     background-color: #9ADD2D;
 }
 
-.recently{
+.recently, .created, .artists{
     padding: 15px;
 }
 
 .img-holder{
-    display: flex;
     padding-top: 15px;
+    content: "";
+    display: table;
+    clear: both;
+    display: flex;
     flex-wrap: wrap;
+   
 }
 
 .album{
+    float: left;
     text-align: center;
+
 }
 
 .album img{
@@ -166,6 +172,7 @@ article{
 .album p{
     font-size: 10px;
 }
+
 
 
 
@@ -300,6 +307,10 @@ a{
     display: block;
 }
 
+.round{
+    border-radius: 50%;
+}
+
 
 
 
@@ -375,10 +386,6 @@ a{
     
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
-    .img-holder{
-        justify-content: center;
-        flex-wrap: wrap;
-    }
     .album{
         width: calc((100vw - 90px) / 2);
         margin: 15px 0px;
@@ -453,11 +460,6 @@ a{
 
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
-    .img-holder{
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-    
     .album{
         width: calc((100vw - 90px) / 4);
         margin: 15px 0px;
@@ -531,11 +533,6 @@ a{
 
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
-
-    .img-holder{
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
     .album{
         width: calc((100vw - 230px) / 4);
         margin: 15px 0px;
@@ -578,14 +575,8 @@ a{
 
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
-    .img-holder{
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
     .album{
         width: calc((100vw - 230px) / 6);
-        margin: 0px auto;
    }
 
 
@@ -614,13 +605,12 @@ a{
 
     /* 00000000000000000000000000000000000000 */
     /* ARTICLE */
-    .img-holder{
+    /* .img-holder{
         justify-content: space-evenly;
         flex-wrap: wrap;
-    }
+    } */
     .album{
         width: calc((100vw - 230px) / 6);
-        margin: 0px auto;
     }
  
 
