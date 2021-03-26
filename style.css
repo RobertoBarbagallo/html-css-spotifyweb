@@ -133,10 +133,11 @@ article{
     width: 150px;
     padding: 10px 0px;
     border: 1px solid white;
-    border-radius: 8px;
+    border-radius: 20px;
     text-align: center;
     margin-right: 20px;  
     font-size: 10px;
+    transition: 2s;
 }
 
 .category{
@@ -153,6 +154,7 @@ article{
     flex-basis: 90px;
     flex-shrink: 0;
     font-size: 12px;
+    position: relative;
 }
 
 .recently, .created, .artists{
@@ -336,6 +338,19 @@ a{
     background-color: white;
     width: 20%;
     height: 100%;
+    position: relative;
+}
+
+.progress-dot{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -8px;
+    display: none;
 }
 
 .always-hidden{
@@ -348,9 +363,12 @@ a{
 
 .underline{
     width: 30%;
-    margin: auto;
     height: 2px;
     background-color: #9ADD2D;
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -693,9 +711,30 @@ a{
     filter: drop-shadow(0 0 4mm  white);
 }
 
+.toggle-bar .fa:hover{
+    filter: drop-shadow(0 0 4mm  white);
+}
+
 
 .img-wrapper:hover .overlay{
     visibility: visible;
 }
 
+.img-wrapper:hover img{
+    filter: blur(10px);
+    filter: drop-shadow(0 0 4mm  white);
+}
 
+
+.progress-bar:hover .progress-dot{
+    display: block;
+}
+
+.progress-bar:hover .progress{
+    background-color: #9ADD2D;
+}
+
+.upgrade:hover{
+    width: 160px;
+    padding: 15px 0px;
+}
