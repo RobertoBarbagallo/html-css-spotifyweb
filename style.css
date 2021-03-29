@@ -24,8 +24,8 @@ aside{
 
 
 #logo{
+    flex-shrink: 0;
     height: 40px;
- 
 }
 
 #logo, #logo-small{
@@ -61,10 +61,6 @@ aside{
 
 .playlist h3{
     font-size: 16px;
-}
-
-.playlist i{
-    font-size: 2em;
 }
 
 .playlist h4{
@@ -149,11 +145,12 @@ article{
 }
 
 .category-list{
-    padding: 20px 0px;
-    text-align: center;
     flex-basis: 90px;
     flex-shrink: 0;
-    font-size: 12px;
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
     position: relative;
 }
 
@@ -161,11 +158,10 @@ article{
     padding: 15px;
 }
 
-.img-holder{
+.album-holder{
     padding-top: 15px;
     display: flex;
     flex-wrap: wrap;
-   
 }
 
 .album{
@@ -197,13 +193,6 @@ article{
     align-items: center;
 }
 
-.album-text{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .album h4{
     font-weight: 100;
     font-size: 12px;
@@ -212,9 +201,6 @@ article{
 .album p{
     font-size: 10px;
 }
-
-
-
 
 
 /* --------------------------------------------------------- */
@@ -238,16 +224,15 @@ article{
 .toggle-bar-left{
     display: flex;
     align-items: center;
-
 }
 
 .toggle-bar-left >.img-container{
     width: 40px;
+    flex-shrink: 0;
 }
 
 .toggle-bar-left >.img-container >img{
     width: 100%;
-    flex-shrink: 0;
 }
 
 .toggle-bar-left >.info-container >h5{
@@ -267,16 +252,10 @@ article{
     justify-content: center;
 }
 
-.toggle-bar-center-top{
+.toggle-bar-center-top, .toggle-bar-center-bottom{
     display: flex;
     align-items: center;
 }
-
-.toggle-bar-center-bottom{
-    display: flex;
-    align-items: center;
-}
-
 
 .toggle-bar-center-bottom >.progress-bar{
     flex-grow: 1;
@@ -300,7 +279,6 @@ article{
 }
 
 
-
 /* --------------------------------------------------------- */
 /* Utilities */
 
@@ -312,10 +290,8 @@ article{
     display: none;
 }
 
-hr{
-    border: 1px solid #878787;
-    width: 90%;
-    margin: 3px auto;
+.always-hidden{
+    display: none;
 }
 
 ul{
@@ -324,6 +300,12 @@ ul{
 
 a{
     text-decoration: none;
+}
+
+hr{
+    border: 1px solid #878787;
+    width: 90%;
+    margin: 3px auto;
 }
 
 .grey-text{
@@ -353,14 +335,6 @@ a{
     display: none;
 }
 
-.always-hidden{
-    display: none;
-}
-
-.round{
-    border-radius: 50%;
-}
-
 .underline{
     width: 30%;
     height: 2px;
@@ -371,13 +345,16 @@ a{
     transform: translateX(-50%);
 }
 
+.round{
+    border-radius: 50%;
+}
+
 
 
 /* --------------------------------------------------------- */
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 479px){
-    
     /* 00000000000000000000000000000000000000 */
     /* TOGGLE BAR */
     .fa-fw{
@@ -395,10 +372,6 @@ a{
     .icon-container{
         flex-direction: column;
         justify-content: center;
-    }
-
-    .toggle-bar-left >a >i{
-        line-height: 0px;
     }
 
     .toggle-bar-center-top >*{
