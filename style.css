@@ -20,6 +20,7 @@ aside{
     background-color: black;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 
@@ -33,7 +34,7 @@ aside{
     align-self: center;
 }
 
-.botton-container, .playlist, .download, .user{
+.botton-container, h3, i, .playlist, .download, .user{
     margin: 10px;
 }
 
@@ -51,20 +52,22 @@ aside{
 
 .playlist{
     flex-grow: 1;
-    overflow: scroll;
+    overflow: auto;
+    min-height: 50px;
 }
 
-.playlist h3, .playlist i{
-    padding: 10px 0px;
-    vertical-align: middle;
-}
-
-.playlist h3{
+aside h3{
     font-size: 16px;
+}
+
+aside i{
+    vertical-align: middle;
 }
 
 .playlist h4{
     font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .playlist ul{
@@ -113,7 +116,7 @@ aside{
 
 article{
     background-color: #141922;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .upgrade-bar{
