@@ -34,7 +34,7 @@ aside{
     align-self: center;
 }
 
-.botton-container, h3, i, .playlist, .download, .user{
+.botton-container, aside h3,  aside i, .playlist, .download, .user{
     margin: 10px;
 }
 
@@ -376,6 +376,10 @@ hr{
         flex-direction: column;
         justify-content: center;
     }
+    
+    .icon-container >a >i{
+        line-height: 0px;
+    }
 
     .toggle-bar-center-top >*{
         padding: 0px 5px;  
@@ -389,10 +393,16 @@ hr{
         padding: 0px 1px;
     }
 
+    .toggle-bar-right .fa-fw{
+        font-size: 12px;
+    }
+
 
     .toggle-bar-right .progress-bar{
-        width: 40px;
+        width: 30px;
     }
+
+
 
     /* 00000000000000000000000000000000000000 */
     /* ASIDE */
