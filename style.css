@@ -23,7 +23,6 @@ aside{
     overflow: auto;
 }
 
-
 #logo{
     flex-shrink: 0;
     height: 40px;
@@ -37,6 +36,7 @@ aside{
 .botton-container, aside h3,  aside i, .playlist, .download, .user{
     margin: 10px;
 }
+
 .botton-container{
     transition: 1s;
 }
@@ -70,7 +70,6 @@ aside i{
 .playlist h4{
     font-size: 14px;
     display: inline-block;
-    vertical-align: middle;
 }
 
 .playlist ul{
@@ -238,7 +237,7 @@ article{
 }
 
 .toggle-bar-left >.img-container >img{
-    width: 100%;
+    width: 100%; 
 }
 
 .toggle-bar-left >.info-container >h5{
@@ -281,7 +280,6 @@ article{
     background-color: #878787;
     margin-right: 15px;
     height: 4px;
-
 }
 
 
@@ -446,7 +444,6 @@ hr{
    #logo-small:hover{
     filter: drop-shadow(0 0 4mm  white);
    }
-
 }
 
 @media screen and (min-width: 480px){
@@ -648,8 +645,6 @@ hr{
     .album{
         width: calc(100% / 6);
    }
-
-
 }
 
 @media screen and (min-width: 1200px){
@@ -717,7 +712,6 @@ hr{
     filter: blur(10px);
     filter: drop-shadow(0 0 4mm  white);
 }
-
 
 .progress-bar:hover .progress-dot{
     display: block;
