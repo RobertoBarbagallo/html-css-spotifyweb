@@ -37,6 +37,9 @@ aside{
 .botton-container, aside h3,  aside i, .playlist, .download, .user{
     margin: 10px;
 }
+.botton-container{
+    transition: 1s;
+}
 
 .menu-button{
     padding-top: 10px;
@@ -689,8 +692,9 @@ hr{
     filter: drop-shadow(0 0 4mm  white);
 }
 
-.category-list >a:hover + .underline{
-    display: block;
+.botton-container:hover{
+    border-left: 2px solid #9ADD2D;
+    padding-left: 20px;
 }
 
 #logo:hover{
@@ -701,6 +705,9 @@ hr{
     filter: drop-shadow(0 0 4mm  white);
 }
 
+.category-list >a:hover + .underline{
+    display: block;
+}
 
 .img-wrapper:hover .overlay{
     visibility: visible;
